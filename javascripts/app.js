@@ -8,7 +8,32 @@
 
   emmm = {
     init: function() {
-      return console.log('init function');
+      console.log('init function');
+      this.eventTemplateMarkup = $("#event-template").html().replace(/[\t\n\r]/g, '');
+      return this.addEvents();
+    },
+    addEvents: function() {
+      var event, events, _i, _len, _results;
+      events = [
+        {
+          movie: 'asffsd',
+          waffle: 'asoorea',
+          drink: 'sdofowjew wjeof'
+        }, {
+          movie: 'bior iro',
+          waffle: 'aadskj ofpewj',
+          drink: 'aokoe keow '
+        }
+      ];
+      _results = [];
+      for (_i = 0, _len = events.length; _i < _len; _i++) {
+        event = events[_i];
+        _results.push($("#events").append(this.eventTemplate(event)));
+      }
+      return _results;
+    },
+    eventTemplate: function(data) {
+      return _.template(this.eventTemplateMarkup, data);
     }
   };
 

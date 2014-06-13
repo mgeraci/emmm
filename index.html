@@ -5,9 +5,11 @@
 		<title>Errol Morris, Waffles, Drinking Vinegar</title>
 		<link rel="stylesheet" href="./stylesheets/style.css" />
 		<script type="text/javascript" src="./javascripts/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="./javascripts/underscore-min.js"></script>
 		<script type="text/javascript" src="./javascripts/app.js"></script>
 	</head>
 	<body>
+
 		<div id="images">
 			<div class="sprite erroll"></div>
 			<div class="sprite jar"></div>
@@ -21,6 +23,19 @@
 				<span class="bull">&bull;</span>
 				Waffles
 			</h1>
+			<div id="events">
+			</div>
 		</div>
+
+		<script id="event-template" type="text/template">
+			<a class="event" href="#">
+				<%= movie %>
+				<br>
+				<%= waffle %>
+				<br>
+				<%= drink %>
+			</a>
+		</script>
+
 	</body>
 </html>

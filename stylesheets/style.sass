@@ -4,9 +4,14 @@
 
 $black: #171717
 $gray: #4d4d4d
+$teal: #b6e4d3
 $bg: #c3c3c3
 
-$info-bg: transparentize(#fff, 0.5)
+$info-bg: transparentize(#fff, 0.3)
+$info-bg-hover: transparentize($teal, 0.3)
+
+*
+  @include box-sizing(border-box)
 
 body
   background: $bg
@@ -14,7 +19,7 @@ body
   font-family: kn, impact, helvetica, arial, sans-serif
 
 #images
-  position: absolute
+  position: fixed
   z-index: 1
   top: 0
   right: 0
@@ -54,7 +59,7 @@ body
   padding: 80px
   font-size: 20px
   color: $gray
-  
+
   h1
     width: 100%
     text-align: center
@@ -68,3 +73,25 @@ body
   h2
     font-size: 40px
     color: $black
+
+  $padding: 24px
+  #events
+    width: 100%
+    margin-top: 80px - $padding
+
+    .event
+      float: left
+      margin: $padding
+      padding: $padding
+        bottom: $padding - 3
+
+      background: $info-bg
+      @include transition(background 50ms linear)
+      border-radius: 5px
+
+      line-height: 26px
+      color: $black
+      text-decoration: none
+
+      &:hover
+        background: $info-bg-hover
