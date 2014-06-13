@@ -1,6 +1,6 @@
 # emmm
 
-The website for "Errol Morris & Waffles & Drinking Vinegars: a club."
+The website for "Errol Morris & Waffles & Drinking Vinegars: A Club."
 
 ## code
 
