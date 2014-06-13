@@ -1,2 +1,97 @@
 @import bourbon/bourbon
 @import reset
+@import fonts
+
+$black: #171717
+$gray: #4d4d4d
+$teal: #b6e4d3
+$bg: #c3c3c3
+
+$info-bg: transparentize(#fff, 0.3)
+$info-bg-hover: transparentize($teal, 0.3)
+
+*
+  @include box-sizing(border-box)
+
+body
+  background: $bg
+  color: $black
+  font-family: kn, impact, helvetica, arial, sans-serif
+
+#images
+  position: fixed
+  z-index: 1
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+  .sprite
+    position: absolute
+    bottom: 0
+    display: block
+    background: url(../images/sprite.png)
+
+    &.erroll
+      left: 0
+      width: 500px
+      height: 499px
+      background-position: 0 0
+
+    &.jar
+      $width: 194px
+      left: 51%
+      margin:
+        left: $width * -0.5
+      width: $width
+      height: 323px
+      background-position: -502px -176px
+
+    &.waffle
+      right: 0
+      width: 349px
+      height: 447px
+      background-position: -721px -49px
+
+#content
+  position: relative
+  z-index: 2
+  padding: 80px
+  font-size: 20px
+  color: $gray
+
+  h1
+    width: 100%
+    text-align: center
+    font-weight: bold
+    font-size: 48px
+    color: $black
+
+    .bull
+      padding: 0 10px
+
+  h2
+    font-size: 40px
+    color: $black
+
+  $padding: 24px
+  #events
+    width: 100%
+    margin-top: 80px - $padding
+
+    .event
+      float: left
+      margin: $padding
+      padding: $padding
+        bottom: $padding - 3
+
+      background: $info-bg
+      @include transition(background 50ms linear)
+      border-radius: 5px
+
+      line-height: 26px
+      color: $black
+      text-decoration: none
+
+      &:hover
+        background: $info-bg-hover
