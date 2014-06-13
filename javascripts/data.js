@@ -116,8 +116,8 @@ events = {
       'year': 2003,
       'title': 'The Fog of War: Eleven Lessons from the Life ' +
                'of Robert S. McNamara',
-      'subject': 'Robert S. McNamara, the Secretary of Defense under Kennedy'
-                 ' and Johnson who escalated U.S. involvement in Vietnam'
+      'subject': 'Robert S. McNamara, the Secretary of Defense ' +
+                 'who escalated U.S. involvement in Vietnam'
     }
     'waffle': {
       'base': 'dosa',
