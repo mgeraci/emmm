@@ -101,7 +101,7 @@ events = {
     }
     'waffle': {
       'base': 'crepe',
-      'toppings': 'raspberry &amp; powdered sugar; pesto &amp; cheese',
+      'toppings': 'raspberry &amp; powdered sugar; pesto &amp; "cheese"',
       'country': 'France'
     }
     'drink': {
@@ -160,7 +160,7 @@ events = {
     }
     'waffle': {
       'base': 'waffle-fries',
-      'toppings': 'poutine toppings (gravy &amp; cheese curds)',
+      'toppings': 'poutine toppings (gravy &amp; curds)',
       'country': 'Canada'
     }
     'drink': {
