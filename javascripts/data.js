@@ -15,7 +15,7 @@ events = {
       'liquor': 'tequila'
     }
     'connection': 'California has the largest Latino population of all U.S. ' +
-                  'states (though not be percentage).'
+                  'states, though not by percentage.'
   },
 
   2: {
@@ -70,8 +70,8 @@ events = {
       'name': 'ponzu',
       'liquor': 'whiskey'
     }
-    'connection': 'Stephen Hawking is from UK, which is next to Ireland, ' +
-                  'and barely in the Roman Empire (where ponzu is from).'
+    'connection': 'Stephen Hawking is from the UK, which is both next to Ireland ' +
+                  'and barely in the former Roman Empire (where ponzu is from).'
   },
 
   5: {
