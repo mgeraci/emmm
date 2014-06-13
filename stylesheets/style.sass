@@ -1,2 +1,51 @@
 @import bourbon/bourbon
 @import reset
+
+$black: #171717
+$gray: #4d4d4d
+$bg: #c3c3c3
+
+$info-bg: transparentize(#fff, 0.5)
+
+body
+  background: $bg
+  color: $black
+
+#images
+  position: absolute
+  z-index: 1
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+  .sprite
+    position: absolute
+    bottom: 0
+    display: block
+    background: url(../images/sprite.png)
+
+    &.erroll
+      left: 0
+      width: 500px
+      height: 499px
+      background-position: 0 0
+
+    &.jar
+      $width: 194px
+      left: 51%
+      margin:
+        left: $width * -0.5
+      width: $width
+      height: 323px
+      background-position: -502px -176px
+
+    &.waffle
+      right: 0
+      width: 349px
+      height: 447px
+      background-position: -721px -49px
+
+#content
+  position: relative
+  z-index: 2
