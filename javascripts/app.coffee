@@ -22,10 +22,15 @@ emmm = {
 		for event of events
 			event = events[event]
 
+			if event.drink.name?
+				drink = event.drink.name
+			else
+				drink = "#{event.drink.base} drinking vinegar"
+
 			@events.push({
 				movie: event.movie.title
-				waffle: event.waffle.base
-				drink: event.drink.base || event.drink.name
+				waffle: "#{event.waffle.base} waffles"
+				drink: drink
 			})
 
 	eventTemplate: (data)->

@@ -23,15 +23,20 @@
       return _results;
     },
     parseEventData: function() {
-      var event, _results;
+      var drink, event, _results;
       this.events = [];
       _results = [];
       for (event in events) {
         event = events[event];
+        if (event.drink.name != null) {
+          drink = event.drink.name;
+        } else {
+          drink = "" + event.drink.base + " drinking vinegar";
+        }
         _results.push(this.events.push({
           movie: event.movie.title,
-          waffle: event.waffle.base,
-          drink: event.drink.base || event.drink.name
+          waffle: "" + event.waffle.base + " waffles",
+          drink: drink
         }));
       }
       return _results;
