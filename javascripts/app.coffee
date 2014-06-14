@@ -4,8 +4,6 @@ $ ->
 emmm = {
 
 	init: ->
-		console.log 'init function'
-
 		# get markup for event and detail templates
 		@eventTemplateMarkup = $("#event-template").html().replace(/[\t\n\r]/g, '')
 
@@ -19,15 +17,16 @@ emmm = {
 
 	# create a structure for event overviews from the data
 	parseEventData: ->
-		@events = [{
-			movie: 'asffsd'
-			waffle: 'asoorea'
-			drink: 'sdofowjew wjeof'
-		}, {
-			movie: 'bior iro'
-			waffle: 'aadskj ofpewj'
-			drink: 'aokoe keow'
-		}]
+		@events = []
+
+		for event of events
+			event = events[event]
+
+			@events.push({
+				movie: event.movie.title
+				waffle: event.waffle.base
+				drink: event.drink.base || event.drink.name
+			})
 
 	eventTemplate: (data)->
 		_.template(@eventTemplateMarkup, data)

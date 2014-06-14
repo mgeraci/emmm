@@ -8,7 +8,6 @@
 
   emmm = {
     init: function() {
-      console.log('init function');
       this.eventTemplateMarkup = $("#event-template").html().replace(/[\t\n\r]/g, '');
       return this.addEvents();
     },
@@ -24,17 +23,18 @@
       return _results;
     },
     parseEventData: function() {
-      return this.events = [
-        {
-          movie: 'asffsd',
-          waffle: 'asoorea',
-          drink: 'sdofowjew wjeof'
-        }, {
-          movie: 'bior iro',
-          waffle: 'aadskj ofpewj',
-          drink: 'aokoe keow'
-        }
-      ];
+      var event, _results;
+      this.events = [];
+      _results = [];
+      for (event in events) {
+        event = events[event];
+        _results.push(this.events.push({
+          movie: event.movie.title,
+          waffle: event.waffle.base,
+          drink: event.drink.base || event.drink.name
+        }));
+      }
+      return _results;
     },
     eventTemplate: function(data) {
       return _.template(this.eventTemplateMarkup, data);
