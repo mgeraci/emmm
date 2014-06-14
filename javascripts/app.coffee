@@ -19,8 +19,8 @@ emmm = {
 	parseEventData: ->
 		@events = []
 
-		for event of events
-			event = events[event]
+		for event of eventData
+			event = eventData[event]
 
 			if event.drink.name?
 				drink = event.drink.name

@@ -1,4 +1,4 @@
-events = {
+eventData = {
   1: {
     'movie': {
       'year': 1978,
@@ -44,7 +44,7 @@ events = {
       'subject': 'A man on death row in Texas'
     },
     'waffle': {
-      'base': 'jalapeno cornbread',
+      'base': 'jalape&ntilde;o cornbread',
       'toppings': 'collards &amp; baked beans',
       'country': 'U.S.A.'
     },
