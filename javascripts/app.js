@@ -60,13 +60,6 @@
 
   window.navigation = {
     initialize: function() {
-      var _this = this;
-      $(".screening-overview").on("click", function(e) {
-        var id;
-        id = _this.getIdFromClick(e);
-        return _this.showScreeningDetail(id);
-      });
-      $(".screening-detail .back").on("click", this.showScreeningOverview);
       return this.loadInitialContent();
     },
     getIdFromClick: function(e) {
@@ -74,11 +67,11 @@
     },
     showScreeningDetail: function(id) {
       $("#screening-overview-wrapper").hide();
-      return $(".screening-detail[data-id=" + id + "]").show();
+      return $(".screening-detail[data-id=" + id + "]").fadeIn();
     },
     showScreeningOverview: function() {
       $(".screening-detail").hide();
-      return $("#screening-overview-wrapper").show();
+      return $("#screening-overview-wrapper").fadeIn();
     },
     loadInitialContent: function() {
       var params;

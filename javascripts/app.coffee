@@ -54,15 +54,6 @@ window.data = {
 
 window.navigation = {
   initialize: ->
-    # clicking a screening overview loads a detail page
-    $(".screening-overview").on("click", (e)=>
-      id = @getIdFromClick(e)
-      @showScreeningDetail(id)
-    )
-
-    # clicking the back button in the details shows the overfiew
-    $(".screening-detail .back").on("click", @showScreeningOverview)
-
     @loadInitialContent()
 
   getIdFromClick: (e)->
@@ -70,11 +61,11 @@ window.navigation = {
 
   showScreeningDetail: (id)->
     $("#screening-overview-wrapper").hide()
-    $(".screening-detail[data-id=#{id}]").show()
+    $(".screening-detail[data-id=#{id}]").fadeIn()
 
   showScreeningOverview: ->
     $(".screening-detail").hide()
-    $("#screening-overview-wrapper").show()
+    $("#screening-overview-wrapper").fadeIn()
 
   # get the params from the url, and if a valid id is present, load that page
   loadInitialContent: ->
