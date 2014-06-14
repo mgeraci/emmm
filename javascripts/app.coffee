@@ -1,34 +1,42 @@
 $ ->
-	emmm.init()
+  emmm.init()
 
-emmm = {
+window.emmm = {
 
-	init: ->
-		# get markup for screening and detail templates
-		@screeningTemplateMarkup = $("#screening-overview-template").html().replace(/[\t\n\r]/g, '')
+  init: ->
+    # get markup for screening and detail templates
+    @screeningTemplateMarkup = $("#screening-overview-template").html().replace(/[\t\n\r]/g, '')
 
-		@addScreenings()
+    @addScreenings()
 
-	addScreenings: ->
-		@parseScreeningData()
+  addScreenings: ->
+    @parseScreeningData()
 
-		for screening in @screenings
-			$("#screening-overview-wrapper").append(@screeningTemplate(screening))
+    for screening in @screenings
+      $("#screening-overview-wrapper").append(@screeningTemplate(screening))
 
-	# create a structure for screening overviews from the data
-	parseScreeningData: ->
-		@screenings = []
+  # create a structure for screening overviews from the data
+  parseScreeningData: ->
+    @screenings = []
 
-		for screening of screeningData
-			screening = screeningData[screening]
+    for screening of screeningData
+      screening = screeningData[screening]
+      screening.waffle.name = @getWaffleName(screening.waffle)
+      screening.drink.name = @getDrinkName(screening.drink)
 
-			if !screening.drink.name?
-				screening.drink.name = "#{screening.drink.base} drinking vinegar"
-
-			@screenings.push({
+      @screenings.push({
         screening: screening
-			})
+      })
 
-	screeningTemplate: (data)->
-		_.template(@screeningTemplateMarkup, data)
+  screeningTemplate: (data)->
+    return _.template(@screeningTemplateMarkup, data)
+
+  getWaffleName: (waffle)->
+    return "#{waffle.base} waffles"
+
+  getDrinkName: (drink)->
+    if drink.name?
+      return drink.name
+    else
+      return "#{drink.base} drinking vinegar"
 }

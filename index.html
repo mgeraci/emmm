@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>Errol Morris, Waffles, Drinking Vinegar</title>
-		<link rel="stylesheet" href="./stylesheets/style.css" />
-		<script type="text/javascript" src="./javascripts/jquery-2.1.1.min.js"></script>
-		<script type="text/javascript" src="./javascripts/underscore-min.js"></script>
-		<script type="text/javascript" src="./javascripts/data.js"></script>
-		<script type="text/javascript" src="./javascripts/app.js"></script>
-	</head>
-	<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Errol Morris, Waffles, Drinking Vinegar</title>
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <script type="text/javascript" src="./javascripts/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="./javascripts/underscore-min.js"></script>
+    <script type="text/javascript" src="./javascripts/data.js"></script>
+    <script type="text/javascript" src="./javascripts/app.js"></script>
+  </head>
+  <body>
 
-		<div id="images">
-			<div class="sprite erroll"></div>
-			<div class="sprite jar"></div>
-			<div class="sprite waffle"></div>
-		</div>
+    <div id="images">
+      <div class="sprite erroll"></div>
+      <div class="sprite jar"></div>
+      <div class="sprite waffle"></div>
+    </div>
 
     <div id="content">
-			<h1>
-				Erroll Morris
-				<span class="bull">&bull;</span>
-				Waffles
-				<span class="bull">&bull;</span>
-				Drinking Vinegars
-			</h1>
-			<div id="screening-overview-wrapper">
-			</div>
-		</div>
+      <h1>
+        Erroll Morris
+        <span class="bull">&bull;</span>
+        Waffles
+        <span class="bull">&bull;</span>
+        Drinking Vinegars
+      </h1>
+      <div id="screening-overview-wrapper">
+      </div>
+    </div>
 
-		<script id="screening-overview-template" type="text/template">
-			<a class="screening-overview" href="#">
-				<span class="movie"><%= screening.movie.title %></span>
-				<br>
-				<span class="waffle"><%= screening.waffle.base %> Waffles</span>
-				<br>
-				<span class="drink"><%= screening.drink.name %></span>
-			</a>
+    <script id="screening-overview-template" type="text/template">
+      <a class="screening-overview" href="#">
+        <span class="movie"><%= screening.movie.title %></span>
+        <br>
+        <span class="waffle"><%= screening.waffle.name %></span>
+        <br>
+        <span class="drink"><%= screening.drink.name %></span>
+      </a>
     </script>
 
-		<script id="screening-detail-template" type="text/template">
+    <script id="screening-detail-template" type="text/template">
       <h2 class="movie"><%= movie.title %> (<%= movie.year %>)</h2>
       <p><%= movie.subject %></p>
-      <h2 class="waffle"><%= waffle.base %> Waffles</h2>
+      <h2 class="waffle"><%= waffle.name %></h2>
       <p><%= waffle.toppings %></p>
-      <h2 class="drink"><%= %></h2>
+      <h2 class="drink"><%= drink.%></h2>
       <p></p>
     </script>
-	</body>
+  </body>
 </html>
