@@ -26,7 +26,7 @@ screeningData = {
     },
     'waffle': {
       'base': 'waffle',
-      'toppings': 'maple syrup, whipped coconut cream, &amp; "bacon"',
+      'toppings': 'maple syrup, whipped coconut cream, &amp; &ldquo;bacon&rdquo;',
       'country': 'U.S.A.'
     },
     'drink': {
@@ -63,7 +63,7 @@ screeningData = {
     },
     'waffle': {
       'base': 'soda bread',
-      'toppings': '"meat" &amp; potato soup',
+      'toppings': '&ldquo;meat&rdquo; &amp; potato soup',
       'country': 'Ireland'
     },
     'drink': {
@@ -101,7 +101,7 @@ screeningData = {
     },
     'waffle': {
       'base': 'crepe',
-      'toppings': 'raspberry &amp; powdered sugar; pesto &amp; "cheese"',
+      'toppings': 'raspberry &amp; powdered sugar; pesto &amp; &ldquo;cheese&rdquo;',
       'country': 'France'
     },
     'drink': {
@@ -148,7 +148,7 @@ screeningData = {
     },
     'connection': 'In by far the most tenuous connection of this series, ' +
                   'Tina Fey is a reenactor in the movie, ' +
-                  'and "TINA" is a subset of "TRINIDAD". ' +
+                  'and TINA is a subset of TRINIDAD. ' +
                   'Switchel originated in Trinidad.'
   },
 
