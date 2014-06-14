@@ -57,6 +57,8 @@ window.navigation = {
     $(".screening-overview").on("click", @showScreeningDetail)
     $(".screening-detail a").on("click", @showScreeningOverview)
 
+    @loadInitialContent()
+
   showScreeningDetail: (e)->
     id = $(e.currentTarget).data("id")
 
@@ -66,4 +68,17 @@ window.navigation = {
   showScreeningOverview: ->
     $(".screening-detail").hide()
     $("#screening-overview-wrapper").show()
+
+  loadInitialContent: ->
+    console.log @getParams()
+
+  getParams: ->
+    res = {}
+    params = window.location.search.replace(/^\?/, "")
+
+    for param in params.split("&")
+      param = param.split("=")
+      res[param[0]] = param[1]
+
+    return res
 }
