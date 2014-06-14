@@ -8,7 +8,7 @@
 
   emmm = {
     init: function() {
-      this.eventTemplateMarkup = $("#event-template").html().replace(/[\t\n\r]/g, '');
+      this.eventTemplateMarkup = $("#event-overview-template").html().replace(/[\t\n\r]/g, '');
       return this.addEvents();
     },
     addEvents: function() {
@@ -18,7 +18,7 @@
       _results = [];
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         event = _ref[_i];
-        _results.push($("#events").append(this.eventTemplate(event)));
+        _results.push($("#event-overview-wrapper").append(this.eventTemplate(event)));
       }
       return _results;
     },

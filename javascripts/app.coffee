@@ -5,7 +5,7 @@ emmm = {
 
 	init: ->
 		# get markup for event and detail templates
-		@eventTemplateMarkup = $("#event-template").html().replace(/[\t\n\r]/g, '')
+		@eventTemplateMarkup = $("#event-overview-template").html().replace(/[\t\n\r]/g, '')
 
 		@addEvents()
 
@@ -13,7 +13,7 @@ emmm = {
 		@parseEventData()
 
 		for event in @events
-			$("#events").append(@eventTemplate(event))
+			$("#event-overview-wrapper").append(@eventTemplate(event))
 
 	# create a structure for event overviews from the data
 	parseEventData: ->
