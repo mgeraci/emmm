@@ -54,14 +54,21 @@ window.data = {
 
 window.navigation = {
   initialize: ->
-    $(".screening-overview").on("click", @showScreeningDetail)
-    $(".screening-detail a").on("click", @showScreeningOverview)
+    # clicking a screening overview loads a detail page
+    $(".screening-overview").on("click", (e)=>
+      id = @getIdFromClick(e)
+      @showScreeningDetail(id)
+    )
+
+    # clicking the back button in the details shows the overfiew
+    $(".screening-detail .back").on("click", @showScreeningOverview)
 
     @loadInitialContent()
 
-  showScreeningDetail: (e)->
-    id = $(e.currentTarget).data("id")
+  getIdFromClick: (e)->
+    return $(e.currentTarget).data("id")
 
+  showScreeningDetail: (id)->
     $("#screening-overview-wrapper").hide()
     $(".screening-detail[data-id=#{id}]").show()
 
@@ -69,8 +76,14 @@ window.navigation = {
     $(".screening-detail").hide()
     $("#screening-overview-wrapper").show()
 
+  # get the params from the url, and if a valid id is present, load that page
   loadInitialContent: ->
-    console.log @getParams()
+    params = @getParams()
+
+    if params.id? && @isValidId(params.id)
+      @showScreeningDetail(params.id)
+    else
+      @showScreeningOverview()
 
   getParams: ->
     res = {}
@@ -81,4 +94,7 @@ window.navigation = {
       res[param[0]] = param[1]
 
     return res
+
+  isValidId: (id)->
+    return _.contains(_.keys(screeningData), id)
 }

@@ -60,13 +60,19 @@
 
   window.navigation = {
     initialize: function() {
-      $(".screening-overview").on("click", this.showScreeningDetail);
-      $(".screening-detail a").on("click", this.showScreeningOverview);
+      var _this = this;
+      $(".screening-overview").on("click", function(e) {
+        var id;
+        id = _this.getIdFromClick(e);
+        return _this.showScreeningDetail(id);
+      });
+      $(".screening-detail .back").on("click", this.showScreeningOverview);
       return this.loadInitialContent();
     },
-    showScreeningDetail: function(e) {
-      var id;
-      id = $(e.currentTarget).data("id");
+    getIdFromClick: function(e) {
+      return $(e.currentTarget).data("id");
+    },
+    showScreeningDetail: function(id) {
       $("#screening-overview-wrapper").hide();
       return $(".screening-detail[data-id=" + id + "]").show();
     },
@@ -75,7 +81,13 @@
       return $("#screening-overview-wrapper").show();
     },
     loadInitialContent: function() {
-      return console.log(this.getParams());
+      var params;
+      params = this.getParams();
+      if ((params.id != null) && this.isValidId(params.id)) {
+        return this.showScreeningDetail(params.id);
+      } else {
+        return this.showScreeningOverview();
+      }
     },
     getParams: function() {
       var param, params, res, _i, _len, _ref;
@@ -88,6 +100,9 @@
         res[param[0]] = param[1];
       }
       return res;
+    },
+    isValidId: function(id) {
+      return _.contains(_.keys(screeningData), id);
     }
   };
 
