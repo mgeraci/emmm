@@ -12,18 +12,22 @@ emmm = {
 		@addEvents()
 
 	addEvents: ->
-		events = [{
+		@parseEventData()
+
+		for event in @events
+			$("#events").append(@eventTemplate(event))
+
+	# create a structure for event overviews from the data
+	parseEventData: ->
+		@events = [{
 			movie: 'asffsd'
 			waffle: 'asoorea'
 			drink: 'sdofowjew wjeof'
 		}, {
 			movie: 'bior iro'
 			waffle: 'aadskj ofpewj'
-			drink: 'aokoe keow '
+			drink: 'aokoe keow'
 		}]
-
-		for event in events
-			$("#events").append(@eventTemplate(event))
 
 	eventTemplate: (data)->
 		_.template(@eventTemplateMarkup, data)

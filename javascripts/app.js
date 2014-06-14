@@ -13,8 +13,18 @@
       return this.addEvents();
     },
     addEvents: function() {
-      var event, events, _i, _len, _results;
-      events = [
+      var event, _i, _len, _ref, _results;
+      this.parseEventData();
+      _ref = this.events;
+      _results = [];
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        event = _ref[_i];
+        _results.push($("#events").append(this.eventTemplate(event)));
+      }
+      return _results;
+    },
+    parseEventData: function() {
+      return this.events = [
         {
           movie: 'asffsd',
           waffle: 'asoorea',
@@ -22,15 +32,9 @@
         }, {
           movie: 'bior iro',
           waffle: 'aadskj ofpewj',
-          drink: 'aokoe keow '
+          drink: 'aokoe keow'
         }
       ];
-      _results = [];
-      for (_i = 0, _len = events.length; _i < _len; _i++) {
-        event = events[_i];
-        _results.push($("#events").append(this.eventTemplate(event)));
-      }
-      return _results;
     },
     eventTemplate: function(data) {
       return _.template(this.eventTemplateMarkup, data);

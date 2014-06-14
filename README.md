@@ -4,7 +4,7 @@ The website for Errol Morris, Waffles, and Drinking Vinegar, a movie marathon.
 
 ## code
 
-Markup is pure html.
+Markup is pure html, with underscore.js templating.
 
 CSS is in SASS: run `sass -wc --style compressed stylesheets/style.sass` to compile
 
