@@ -128,7 +128,7 @@ screeningData = {
       'base': 'mango coconut',
       'liquor': 'vodka'
     },
-    'connection': 'India opposed American involvement in the Vietnam War.'
+    'connection': 'India opposed U.S. involvement in the Vietnam War.'
   },
 
   8: {

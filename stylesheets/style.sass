@@ -4,6 +4,7 @@
 
 $black: #171717
 $gray: #4d4d4d
+$light-gray: #888
 $teal: #b6e4d3
 $bg: #c3c3c3
 
@@ -54,6 +55,10 @@ body
       height: 447px
       background-position: -721px -49px
 
+@mixin screening-background
+  background: $info-bg
+  border-radius: 5px
+
 #content
   position: relative
   z-index: 2
@@ -90,9 +95,8 @@ body
       padding: $padding
         bottom: $padding - 3
 
-      background: $info-bg
+      @include screening-background
       @include transition(background 50ms linear)
-      border-radius: 5px
 
       line-height: 26px
       color: $black
@@ -102,10 +106,31 @@ body
         background: $info-bg-hover
 
   .screening-detail
-    width: 80%
-    margin-left: 20%
-    background: $info-bg
     display: none
+    width: 80%
+    margin:
+      top: 80px
+      left: 10%
+    padding: $padding * 2
+    @include screening-background
 
     &.show
       display: block
+
+    h2
+      margin:
+        top: $padding * 2
+
+      &:first-child
+        margin:
+          top: 0
+
+      .header-detail
+        margin:
+          left: 10px
+        color: $light-gray
+        font-size: 25px
+
+    p
+      margin:
+        top: 10px

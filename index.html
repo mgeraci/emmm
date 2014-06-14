@@ -43,11 +43,13 @@
     <script id="screening-detail-template" type="text/template">
       <div class="screening-detail" data-id="<%= screening.id %>">
         <h2 class="movie">
-          <%= screening.movie.title %> (<%= screening.movie.year %>)
+          <%= screening.movie.title %>
+          <span class="header-detail"><%= screening.movie.year %></span>
         </h2>
         <p><%= screening.movie.subject %></p>
         <h2 class="waffle">
-          <%= screening.waffle.name %> (<%= screening.waffle.country %>)
+          <%= screening.waffle.name %>
+          <span class="header-detail"><%= screening.waffle.country %></span>
         </h2>
         <p>with <%= screening.waffle.toppings %></p>
         <h2 class="drink"><%= screening.drink.name %></h2>
