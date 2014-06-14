@@ -59,14 +59,18 @@
 
   window.navigation = {
     initialize: function() {
-      return $(".screening-overview").on("click", this.showScreeningDetail);
+      $(".screening-overview").on("click", this.showScreeningDetail);
+      return $(".screening-detail a").on("click", this.showScreeningOverview);
     },
     showScreeningDetail: function(e) {
       var id;
       id = $(e.currentTarget).data("id");
-      console.log(id);
       $("#screening-overview-wrapper").hide();
       return $(".screening-detail[data-id=" + id + "]").show();
+    },
+    showScreeningOverview: function() {
+      $(".screening-detail").hide();
+      return $("#screening-overview-wrapper").show();
     }
   };
 

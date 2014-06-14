@@ -46,7 +46,7 @@
           <%= screening.movie.title %>
           <span class="header-detail"><%= screening.movie.year %></span>
         </h2>
-        <p><%= screening.movie.subject %></p>
+        <p>about <%= screening.movie.subject %></p>
         <h2 class="waffle">
           <%= screening.waffle.name %>
           <span class="header-detail"><%= screening.waffle.country %></span>
@@ -56,6 +56,7 @@
         <p>with <%= screening.drink.liquor %></p>
         <h2>Connection</h2>
         <p><%= screening.connection %></p>
+        <a href="#">back</a>
       </div>
     </script>
   </body>

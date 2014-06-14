@@ -3,7 +3,7 @@ screeningData = {
     'movie': {
       'year': 1978,
       'title': 'Gates of Heaven',
-      'subject': 'A pet cemetery in California'
+      'subject': 'a pet cemetery in California'
     },
     'waffle': {
       'base': 'arepa',
@@ -22,7 +22,7 @@ screeningData = {
     'movie': {
       'year': 1981,
       'title': 'Vernon, Florida',
-      'subject': 'Eccentrics in this Florida town'
+      'subject': 'eccentrics in this Florida town'
     },
     'waffle': {
       'base': 'waffle',
@@ -41,7 +41,7 @@ screeningData = {
     'movie': {
       'year': 1988,
       'title': 'The Thin Blue Line',
-      'subject': 'A man on death row in Texas'
+      'subject': 'a man on death row in Texas'
     },
     'waffle': {
       'base': 'jalape&ntilde;o cornbread',
@@ -78,7 +78,7 @@ screeningData = {
     'movie': {
       'year': 1997,
       'title': 'Fast, Cheap &amp; Out of Control',
-      'subject': 'Four quirky people'
+      'subject': 'four quirky people'
     },
     'waffle': {
       'base': 'injera',
@@ -97,7 +97,7 @@ screeningData = {
     'movie': {
       'year': 1999,
       'title': 'Mr. Death: The Rise and Fall of Fred A. Leuchter, Jr.',
-      'subject': 'A Holocaust denier'
+      'subject': 'a Holocaust denier'
     },
     'waffle': {
       'base': 'crepe',
@@ -135,7 +135,7 @@ screeningData = {
     'movie': {
       'year': 2008,
       'title': 'Standard Operating Procedure',
-      'subject': 'The Abu Ghraib prison'
+      'subject': 'the Abu Ghraib prison'
     },
     'waffle': {
       'base': 'roti',
@@ -148,7 +148,7 @@ screeningData = {
     },
     'connection': 'In by far the most tenuous connection of this series, ' +
                   'Tina Fey is a reenactor in the movie, ' +
-                  'and "TINA" is a subset of "TRINIDAD".' +
+                  'and "TINA" is a subset of "TRINIDAD". ' +
                   'Switchel originated in Trinidad.'
   },
 
@@ -156,7 +156,7 @@ screeningData = {
     'movie': {
       'year': 2010,
       'title': 'Tabloid',
-      'subject': 'The Manacled Mormon scandal'
+      'subject': 'the Manacled Mormon scandal'
     },
     'waffle': {
       'base': 'waffle-fries',

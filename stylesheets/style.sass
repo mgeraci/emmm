@@ -108,9 +108,11 @@ body
   .screening-detail
     display: none
     width: 80%
+    max-width: 600px
     margin:
       top: 80px
-      left: 10%
+      right: auto
+      left: auto
     padding: $padding * 2
     @include screening-background
 
@@ -134,3 +136,13 @@ body
     p
       margin:
         top: 10px
+
+    a
+      display: inline-block
+      margin:
+        top: $padding * 2
+      color: $gray
+      text-decoration: none
+
+      &:hover
+        color: darken($teal, 10%)

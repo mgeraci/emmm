@@ -55,10 +55,15 @@ window.data = {
 window.navigation = {
   initialize: ->
     $(".screening-overview").on("click", @showScreeningDetail)
+    $(".screening-detail a").on("click", @showScreeningOverview)
 
   showScreeningDetail: (e)->
     id = $(e.currentTarget).data("id")
-    console.log(id)
+
     $("#screening-overview-wrapper").hide()
     $(".screening-detail[data-id=#{id}]").show()
+
+  showScreeningOverview: ->
+    $(".screening-detail").hide()
+    $("#screening-overview-wrapper").show()
 }
