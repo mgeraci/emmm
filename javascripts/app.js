@@ -8,41 +8,37 @@
 
   emmm = {
     init: function() {
-      this.eventTemplateMarkup = $("#event-overview-template").html().replace(/[\t\n\r]/g, '');
-      return this.addEvents();
+      this.screeningTemplateMarkup = $("#screening-overview-template").html().replace(/[\t\n\r]/g, '');
+      return this.addScreenings();
     },
-    addEvents: function() {
-      var event, _i, _len, _ref, _results;
-      this.parseEventData();
-      _ref = this.events;
+    addScreenings: function() {
+      var screening, _i, _len, _ref, _results;
+      this.parseScreeningData();
+      _ref = this.screenings;
       _results = [];
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        event = _ref[_i];
-        _results.push($("#event-overview-wrapper").append(this.eventTemplate(event)));
+        screening = _ref[_i];
+        _results.push($("#screening-overview-wrapper").append(this.screeningTemplate(screening)));
       }
       return _results;
     },
-    parseEventData: function() {
-      var drink, event, _results;
-      this.events = [];
+    parseScreeningData: function() {
+      var screening, _results;
+      this.screenings = [];
       _results = [];
-      for (event in eventData) {
-        event = eventData[event];
-        if (event.drink.name != null) {
-          drink = event.drink.name;
-        } else {
-          drink = "" + event.drink.base + " drinking vinegar";
+      for (screening in screeningData) {
+        screening = screeningData[screening];
+        if (screening.drink.name == null) {
+          screening.drink.name = "" + screening.drink.base + " drinking vinegar";
         }
-        _results.push(this.events.push({
-          movie: event.movie.title,
-          waffle: "" + event.waffle.base + " waffles",
-          drink: drink
+        _results.push(this.screenings.push({
+          screening: screening
         }));
       }
       return _results;
     },
-    eventTemplate: function(data) {
-      return _.template(this.eventTemplateMarkup, data);
+    screeningTemplate: function(data) {
+      return _.template(this.screeningTemplateMarkup, data);
     }
   };
 

@@ -75,12 +75,16 @@ body
     font-size: 40px
     color: $black
 
+  .waffle,
+  .drink
+    text-transform: capitalize
+
   $padding: 24px
-  #event-overview-wrapper
+  #screening-overview-wrapper
     width: 100%
     margin-top: 80px - $padding
 
-    .event-overview
+    .screening-overview
       float: left
       margin: $padding
       padding: $padding
@@ -97,6 +101,7 @@ body
       &:hover
         background: $info-bg-hover
 
-      .waffle,
-      .drink
-        text-transform: capitalize
+  .screening-detail
+    width: 80%
+    margin-left: 20%
+    background: $info-bg

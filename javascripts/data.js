@@ -1,4 +1,4 @@
-eventData = {
+screeningData = {
   1: {
     'movie': {
       'year': 1978,

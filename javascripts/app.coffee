@@ -4,35 +4,31 @@ $ ->
 emmm = {
 
 	init: ->
-		# get markup for event and detail templates
-		@eventTemplateMarkup = $("#event-overview-template").html().replace(/[\t\n\r]/g, '')
+		# get markup for screening and detail templates
+		@screeningTemplateMarkup = $("#screening-overview-template").html().replace(/[\t\n\r]/g, '')
 
-		@addEvents()
+		@addScreenings()
 
-	addEvents: ->
-		@parseEventData()
+	addScreenings: ->
+		@parseScreeningData()
 
-		for event in @events
-			$("#event-overview-wrapper").append(@eventTemplate(event))
+		for screening in @screenings
+			$("#screening-overview-wrapper").append(@screeningTemplate(screening))
 
-	# create a structure for event overviews from the data
-	parseEventData: ->
-		@events = []
+	# create a structure for screening overviews from the data
+	parseScreeningData: ->
+		@screenings = []
 
-		for event of eventData
-			event = eventData[event]
+		for screening of screeningData
+			screening = screeningData[screening]
 
-			if event.drink.name?
-				drink = event.drink.name
-			else
-				drink = "#{event.drink.base} drinking vinegar"
+			if !screening.drink.name?
+				screening.drink.name = "#{screening.drink.base} drinking vinegar"
 
-			@events.push({
-				movie: event.movie.title
-				waffle: "#{event.waffle.base} waffles"
-				drink: drink
+			@screenings.push({
+        screening: screening
 			})
 
-	eventTemplate: (data)->
-		_.template(@eventTemplateMarkup, data)
+	screeningTemplate: (data)->
+		_.template(@screeningTemplateMarkup, data)
 }

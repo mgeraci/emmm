@@ -25,20 +25,27 @@
 				<span class="bull">&bull;</span>
 				Drinking Vinegars
 			</h1>
-			<div id="event-overview-wrapper">
+			<div id="screening-overview-wrapper">
 			</div>
 		</div>
 
-		<script id="event-overview-template" type="text/template">
-			<a class="event-overview" href="#">
-				<span class="movie"><%= movie %></span>
+		<script id="screening-overview-template" type="text/template">
+			<a class="screening-overview" href="#">
+				<span class="movie"><%= screening.movie.title %></span>
 				<br>
-				<span class="waffle"><%= waffle %></span>
+				<span class="waffle"><%= screening.waffle.base %> Waffles</span>
 				<br>
-				<span class="drink"><%= drink %></span>
+				<span class="drink"><%= screening.drink.name %></span>
 			</a>
     </script>
 
-
+		<script id="screening-detail-template" type="text/template">
+      <h2 class="movie"><%= movie.title %> (<%= movie.year %>)</h2>
+      <p><%= movie.subject %></p>
+      <h2 class="waffle"><%= waffle.base %> Waffles</h2>
+      <p><%= waffle.toppings %></p>
+      <h2 class="drink"><%= %></h2>
+      <p></p>
+    </script>
 	</body>
 </html>
