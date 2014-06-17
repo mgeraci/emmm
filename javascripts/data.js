@@ -7,7 +7,7 @@ screeningData = {
     },
     'waffle': {
       'base': 'arepa',
-      'toppings': 'guacamole, salsa fresca, &amp; cilantro black beans',
+      'toppings': 'guacamole, salsa fresca, and cilantro black beans',
       'country': 'Venezuela'
     },
     'drink': {
@@ -15,7 +15,7 @@ screeningData = {
       'liquor': 'tequila'
     },
     'connection': 'California has the largest Latino population of all U.S. ' +
-                  'states, though not by percentage.'
+                  'states (though not by percentage).'
   },
 
   2: {
@@ -26,7 +26,7 @@ screeningData = {
     },
     'waffle': {
       'base': 'waffle',
-      'toppings': 'maple syrup, whipped coconut cream, &amp; &ldquo;bacon&rdquo;',
+      'toppings': 'maple syrup, whipped coconut cream, and &ldquo;bacon&rdquo;',
       'country': 'U.S.A.'
     },
     'drink': {
@@ -45,7 +45,7 @@ screeningData = {
     },
     'waffle': {
       'base': 'jalape&ntilde;o cornbread',
-      'toppings': 'collards &amp; baked beans',
+      'toppings': 'collards and mashed potatoes &amp; gravy',
       'country': 'U.S.A.'
     },
     'drink': {
@@ -71,7 +71,8 @@ screeningData = {
       'liquor': 'whiskey'
     },
     'connection': 'Stephen Hawking is from the UK, which is both next to Ireland ' +
-                  'and barely in the former Roman Empire (where ponzu is from).'
+                  'and (barely) in the former Roman Empire. Ponzu is from the ' +
+									'Roman Empire.'
   },
 
   5: {
@@ -82,7 +83,7 @@ screeningData = {
     },
     'waffle': {
       'base': 'injera',
-      'toppings': 'kik alicha (yellow split peas) &amp; gomen wat (kale)',
+      'toppings': 'kik alicha (yellow split peas) and gomen wat (kale)',
       'country': 'Ethiopia'
     },
     'drink': {
@@ -121,7 +122,7 @@ screeningData = {
     },
     'waffle': {
       'base': 'dosa',
-      'toppings': 'potatoes, salad, &amp; coconut chutney',
+      'toppings': 'potatoes, salad, and coconut chutney',
       'country': 'India'
     },
     'drink': {
@@ -139,7 +140,7 @@ screeningData = {
     },
     'waffle': {
       'base': 'roti',
-      'toppings': 'channa (chickpeas) &amp; pumpkin',
+      'toppings': 'channa (chickpeas) and pumpkin',
       'country': 'Trinidad'
     },
     'drink': {
@@ -179,7 +180,7 @@ screeningData = {
     },
     'waffle': {
       'base': 'scallion pancake',
-      'toppings': 'kimchi &amp; sesame tofu',
+      'toppings': 'kimchi and sesame tofu',
       'country': 'Korea'
     },
     'drink': {
