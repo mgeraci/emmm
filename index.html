@@ -31,7 +31,7 @@
 
     <script id="screening-overview-template" type="text/template">
 			<a id="id-<%= screening.id %>" class="screening-overview" data-id="<%= screening.id %>"
-					href="/?id=<%= screening.id %>">
+					href="./?id=<%= screening.id %>">
 				<div class="number-wrapper">
 					<span><%= screening.id %></span>
 				</div>
@@ -59,7 +59,7 @@
         <p>with <%= screening.drink.liquor %></p>
         <h2>Connection</h2>
         <p><%= screening.connection %></p>
-        <a class="back" href="/">back</a>
+        <a class="back" href="./">back</a>
       </div>
     </script>
   </body>
