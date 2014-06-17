@@ -188,6 +188,7 @@ screeningData = {
       'liquor': 'sake'
     },
     'connection': 'Rumsfeld assessed intercontinental ballistic missile ' +
-                  'risk from North Korea, which is close to Japan.'
+                  'risk from North Korea, which is close to Japan, ' +
+                  'where sake is from.
   }
 }
