@@ -90,21 +90,64 @@ body
     width: 100%
     margin-top: 80px - $padding
 
+    $number-width: 80px
     .screening-overview
+      position: relative
       float: left
       margin: $padding
       padding: $padding
         bottom: $padding - 3
+        left: $number-width + $padding
 
+      @include transition(background 100ms linear)
       @include screening-background
-      @include transition(background 50ms linear)
 
       line-height: 26px
       color: $black
       text-decoration: none
 
       &:hover
+        @include transition(background 0ms linear)
         background: $info-bg-hover
+
+      .number-wrapper
+        position: absolute
+        overflow: hidden
+        top: 0
+        left: 0
+        width: $number-width
+        height: 100%
+        @include border-left-radius(5px)
+        background: transparentize($black, 0.75)
+
+        span
+          position: relative
+          right: 10px
+          font-size: 200px
+          line-height: 150px
+          color: transparentize($black, 0.8)
+
+      &#id-1 .number-wrapper span
+        right: -15px
+
+      &#id-3 .number-wrapper span
+        right: 7px
+
+      &#id-4 .number-wrapper span
+        right: 8px
+
+      &#id-5 .number-wrapper span
+        right: 8px
+
+      &#id-7 .number-wrapper span
+        right: 5px
+
+      &#id-8 .number-wrapper span
+        right: 8px
+
+      &#id-10 .number-wrapper span
+        right: 20px
+        letter-spacing: -15px
 
   .screening-detail
     display: none

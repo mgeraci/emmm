@@ -19,7 +19,7 @@
 
     <div id="content">
       <h1>
-        Erroll Morris
+        Errol Morris
         <span class="bull">&bull;</span>
         Waffles
         <span class="bull">&bull;</span>
@@ -30,8 +30,11 @@
     </div>
 
     <script id="screening-overview-template" type="text/template">
-      <a class="screening-overview" data-id="<%= screening.id %>"
+			<a id="id-<%= screening.id %>" class="screening-overview" data-id="<%= screening.id %>"
 					href="/?id=<%= screening.id %>">
+				<div class="number-wrapper">
+					<span><%= screening.id %></span>
+				</div>
         <span class="movie"><%= screening.movie.title %></span>
         <br>
         <span class="waffle"><%= screening.waffle.name %></span>
