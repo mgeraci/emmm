@@ -72,7 +72,7 @@ screeningData = {
     },
     'connection': 'Stephen Hawking is from the UK, which is both next to Ireland ' +
                   'and (barely) in the former Roman Empire. Ponzu is from the ' +
-									'Roman Empire.'
+                  'Roman Empire.'
   },
 
   5: {
@@ -189,6 +189,6 @@ screeningData = {
     },
     'connection': 'Rumsfeld assessed intercontinental ballistic missile ' +
                   'risk from North Korea, which is close to Japan, ' +
-                  'where sake is from.
+                  'where sake is from.'
   }
 }
