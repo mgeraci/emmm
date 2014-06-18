@@ -182,12 +182,24 @@ body
         top: 10px
       line-height: 22px
 
-    a
+    .back
       display: inline-block
       margin:
         top: $padding * 2
       color: $gray
       text-decoration: none
 
+      &:before
+        content: " "
+        display: inline-block
+        margin-right: 6px
+        background: url(../images/sprite.png)
+        width: 8px
+        height: 12px
+        background-position: -529px -6px
+
       &:hover
         color: darken($teal, 10%)
+
+        &:before
+          background-position: -537px -6px
