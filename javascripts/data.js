@@ -14,8 +14,8 @@ screeningData = {
       'base': 'guava',
       'liquor': 'tequila'
     },
-    'connection': 'California has the largest Latino population of all U.S. ' +
-                  'states (though not by percentage).'
+    'connection': "California has the largest Latino population of all U.S. " +
+                  "states (though not by percentage, that's New Mexico)."
   },
 
   2: {
