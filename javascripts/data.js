@@ -52,7 +52,7 @@ screeningData = {
       'base': 'sweet tea',
       'liquor': 'bourbon'
     },
-    'connection': 'Texas.'
+    'connection': 'The South.'
   },
 
   4: {
