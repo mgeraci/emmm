@@ -71,8 +71,7 @@ screeningData = {
       'liquor': 'whiskey'
     },
     'connection': 'Stephen Hawking is from the UK, which is both next to Ireland ' +
-                  'and (barely) in the former Roman Empire. Ponzu is from the ' +
-                  'Roman Empire.'
+                  'and (barely) in the former Roman Empire, where ponzu is from.'
   },
 
   5: {
@@ -148,7 +147,11 @@ screeningData = {
       'liquor': 'rum'
     },
     'connection': 'In by far the most tenuous connection of this series, ' +
-                  'Tina Fey is a reenactor in the movie, ' +
+                  'Wikipedia <a href=' + 
+                  '"http://en.wikipedia.org/w/index.php?title=Standard_' + 
+                  'Operating_Procedure_%28film%29&diff=623736707&oldid=623410631">' + 
+                  'once falsely listed</a> Tina Fey ' + 
+                  'as a reenactor in the movie, ' +
                   'and TINA is a subset of TRINIDAD. ' +
                   'Switchel originated in Trinidad.'
   },
