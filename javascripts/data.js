@@ -7,12 +7,13 @@ screeningData = {
     },
     'waffle': {
       'base': 'arepa',
-      'toppings': 'guacamole, salsa fresca, and cilantro black beans',
+      'toppings': 'guacamole, salsa fresca, caraotas (Venezuelan-style black beans), and jicama tempeh',
       'country': 'Venezuela'
     },
     'drink': {
       'base': 'guava',
-      'liquor': 'tequila'
+      'liquor': 'tequila',
+      'recipe': '2L guava juice, 3c apple cider vinegar, 1L coconut water, 3c cucumber purée, 0.5c lime juice, 8c water, 0.5c chopped cilantro'
     },
     'connection': "California has the largest Latino population of all U.S. " +
                   "states (though not by percentage, that's New Mexico)."
@@ -147,10 +148,10 @@ screeningData = {
       'liquor': 'rum'
     },
     'connection': 'In by far the most tenuous connection of this series, ' +
-                  'Wikipedia <a href=' + 
-                  '"http://en.wikipedia.org/w/index.php?title=Standard_' + 
-                  'Operating_Procedure_%28film%29&diff=623736707&oldid=623410631">' + 
-                  'once falsely listed</a> Tina Fey ' + 
+                  'Wikipedia <a href=' +
+                  '"http://en.wikipedia.org/w/index.php?title=Standard_' +
+                  'Operating_Procedure_%28film%29&diff=623736707&oldid=623410631">' +
+                  'once falsely listed</a> Tina Fey ' +
                   'as a reenactor in the movie, ' +
                   'and TINA is a subset of TRINIDAD. ' +
                   'Switchel originated in Trinidad.'
