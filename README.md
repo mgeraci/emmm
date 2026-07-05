@@ -2,6 +2,8 @@
 
 The website for "Errol Morris & Waffles & Drinking Vinegars: A Movie Club."
 
+https://mgeraci.github.io/emmm/
+
 ## code
 
 Markup is pure html, with underscore.js templating.
